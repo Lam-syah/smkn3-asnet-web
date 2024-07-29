@@ -399,7 +399,7 @@
               </div>
               <div class="detail-box">
                 <h5>
-                  Maharani Livia
+                  Yudo Reitama
                 </h5>
                 <p>
                   Marketing Head
@@ -495,7 +495,7 @@
               </div>
               <div class="detail-box">
                 <h5>
-                  Yudo Reitami
+                  Maharani Livia
                 </h5>
                 <p>
                   Marketing Head
@@ -525,6 +525,80 @@
     </div>
   </section>
   <!-- end team section -->
+
+  <html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulasan Pengguna</title>
+    <style>
+        .review {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .review-title {
+            font-weight: bold;
+        }
+        .review-content {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ulasan Pengguna</h1>
+    
+    <!-- Ulasan 1 -->
+    <div class="review">
+        <div class="review-title">Judul Ulasan 1</div>
+        <div class="review-content">Isi ulasan 1. Ini adalah ulasan dari pengguna.</div>
+    </div>
+    
+    <!-- Ulasan 2 -->
+    <div class="review">
+        <div class="review-title">Judul Ulasan 2</div>
+        <div class="review-content">Isi ulasan 2. Ini adalah ulasan dari pengguna lain.</div>
+    </div>
+    
+    <!-- Tambah ulasan baru -->
+    <form id="review-form">
+        <h2>Tambahkan Ulasan Anda</h2>
+        <label for="title">Masukkan Email Anda:</label><br>
+        <input type="text" id="title" name="title" required><br><br>
+        <label for="content">Isi Ulasan:</label><br>
+        <textarea id="content" name="content" required></textarea><br><br>
+        <button type="button" onclick="addReview()">Tambahkan Ulasan</button>
+    </form>
+
+    <script>
+        function addReview() {
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+            
+            if (title && content) {
+                const reviewContainer = document.createElement('div');
+                reviewContainer.classList.add('review');
+                
+                const reviewTitle = document.createElement('div');
+                reviewTitle.classList.add('review-title');
+                reviewTitle.textContent = title;
+                
+                const reviewContent = document.createElement('div');
+                reviewContent.classList.add('review-content');
+                reviewContent.textContent = content;
+                
+                reviewContainer.appendChild(reviewTitle);
+                reviewContainer.appendChild(reviewContent);
+                
+                document.body.appendChild(reviewContainer);
+                
+                // Reset form
+                document.getElementById('review-form').reset();
+            }
+        }
+    </script>
+</body>
+</html>
 
 
   <!-- client section -->
